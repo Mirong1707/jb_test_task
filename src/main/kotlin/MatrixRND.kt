@@ -1,5 +1,5 @@
 class MatrixRND(width: Int, height: Int) {
-    // В данной задаче нам понадобится только рандомно сгенерированные матрицы определённого размера
+    // In this task we only need randomly generated matrix
     private var matrix = Array(height) { Array(width) { rand() } }
 
     //constructor from NetworkLayer
