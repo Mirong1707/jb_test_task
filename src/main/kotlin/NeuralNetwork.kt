@@ -14,7 +14,7 @@ class NeuralNetwork(private val layers: Array<NetworkLayer>) {
 
             // Here we multiply matrix of weights with matrix of neurons, add bias, and use  activation function, if needed
             layers[index + 1] = weightsMatrix.mul(prevLayerNeuronsMatrix)
-                .add(bias).applyActivationFunction(layers[index + 1].funType)
+                .plus(bias).applyActivationFunction(layers[index + 1].funType)
                 .getLayer(layers[index + 1].funType)
         }
         throw Exception("Should not be here")
